@@ -1,9 +1,3 @@
-# include yum
+class{'java': } -> class{'cloudera': }
+class{'sshconfig': }
 
-# package{
-#   ["java-1.6.0-openjdk"]:
-#     ensure => "present"
-# }
-
-include java
-include cloudera
