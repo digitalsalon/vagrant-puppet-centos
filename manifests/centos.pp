@@ -5,4 +5,5 @@
 #     ensure => "present"
 # }
 
+include java
 include cloudera
