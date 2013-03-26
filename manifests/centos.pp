@@ -1,3 +1,3 @@
-class{'java': } -> class{'cloudera': } -> class{'hadoop': }
+class{'cloudera': }
+class{'java': } -> class{'hadoop': }
 class{'sshconfig': }
-
