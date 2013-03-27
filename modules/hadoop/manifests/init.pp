@@ -1,4 +1,4 @@
-class hadoop {
+class hadoop($java_home) {
   $hadoop_home = "/etc/hadoop"
 
   $slaves = ['192.168.0.12', '192.168.0.13', '192.168.0.14']

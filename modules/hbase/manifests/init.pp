@@ -1,4 +1,4 @@
-class hbase {
+class hbase($java_home) {
   $hbase_home = "/etc/hbase"
 
   package { ["hbase"]:
