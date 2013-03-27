@@ -57,13 +57,13 @@ class hadoop {
   #   require => Package["hadoop-hdfs"],
   # }
 
-  # file { "hadoop-env.sh":
-  #   path    => "${hadoop_home}/conf/hadoop-env.sh",
-  #   source  => "puppet:///modules/hadoop/hadoop-env.sh",
-  #   mode    => 644,
-  #   owner   => root,
-  #   group   => root,
-  #   replace => true,
-  #   require => Package["hadoop-hdfs"]
-  # }
+  file { "hadoop-env.sh":
+    path    => "${hadoop_home}/conf/hadoop-env.sh",
+    content => template("hadoop/hadoop-env.sh.erb"),
+    mode    => 644,
+    owner   => root,
+    group   => root,
+    replace => true,
+    require => Package["hadoop-hdfs"]
+  }
 }
