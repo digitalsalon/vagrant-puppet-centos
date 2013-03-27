@@ -5,7 +5,7 @@ class hbase($java_home) {
     ensure => "installed"
   }
 
-  file { "hadoop-env.sh":
+  file { "hbase-env.sh":
     path    => "${hbase_home}/conf/hbase-env.sh",
     content => template("hbase/hbase-env.sh.erb"),
     mode    => 644,
